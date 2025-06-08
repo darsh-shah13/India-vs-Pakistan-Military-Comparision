@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>India vs Pakistan Military Power Comparison (2025)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .data-card {
+            transition: all 0.3s ease;
+        }
+        .data-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .flag-gradient-india {
+            background: linear-gradient(135deg, #FF9933 33%, #FFFFFF 33%, #FFFFFF 66%, #138808 66%);
+        }
+        .flag-gradient-pakistan {
+            background: linear-gradient(135deg, #01411C 33%, #FFFFFF 33%, #FFFFFF 66%, #01411C 66%);
+        }
+        .navy-gradient {
+            background: linear-gradient(to right, #1a237e, #283593);
+        }
+        .army-gradient {
+            background: linear-gradient(to right, #4b5320, #5d6d1e);
+        }
+        .airforce-gradient {
+            background: linear-gradient(to right, #003366, #004080);
+        }
+        .nuclear-gradient {
+            background: linear-gradient(to right, #b71c1c, #d32f2f);
+        }
+        .comparison-bar {
+            height: 30px;
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+        .bar-india {
+            background-color: #FF9933;
+        }
+        .bar-pakistan {
+            background-color: #01411C;
+        }
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 200px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <header class="navy-gradient text-white py-6 shadow-lg">
+        <div class="container mx-auto px-4">
+            <h1 class="text-3xl font-bold text-center">India vs Pakistan Military Power Comparison (2025 Projections)</h1>
+            <p class="text-center mt-2 opacity-90">A comprehensive analysis of conventional and strategic military capabilities</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <!-- Overview Section -->
+        <section class="mb-12 bg-white rounded-xl shadow-md overflow-hidden">
+            <div class="p-6">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Strategic Overview</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="flag-gradient-india p-6 rounded-lg text-black">
+                        <h3 class="text-xl font-bold mb-3">India</h3>
+                        <p class="mb-2"><i class="fas fa-trophy mr-2"></i> <strong>Global Power Rank:</strong> 4th (GFP Score: 0.1184)</p>
+                        <p class="mb-2"><i class="fas fa-dollar-sign mr-2"></i> <strong>Defense Budget:</strong> $86.1 Billion (2024)</p>
+                        <p class="mb-2"><i class="fas fa-user-shield mr-2"></i> <strong>Active Personnel:</strong> ~1.47 Million</p>
+                        <p><i class="fas fa-radiation mr-2"></i> <strong>Nuclear Warheads:</strong> ~180</p>
+                    </div>
+                    <div class="flag-gradient-pakistan p-6 rounded-lg text-black">
+                        <h3 class="text-xl font-bold mb-3">Pakistan</h3>
+                        <p class="mb-2"><i class="fas fa-trophy mr-2"></i> <strong>Global Power Rank:</strong> 12th (GFP Score: 0.2513)</p>
+                        <p class="mb-2"><i class="fas fa-dollar-sign mr-2"></i> <strong>Defense Budget:</strong> $10.2 Billion (2024)</p>
+                        <p class="mb-2"><i class="fas fa-user-shield mr-2"></i> <strong>Active Personnel:</strong> ~660,000</p>
+                        <p><i class="fas fa-radiation mr-2"></i> <strong>Nuclear Warheads:</strong> ~170</p>
+                    </div>
+                </div>
+                <div class="mt-6 bg-gray-50 p-4 rounded-lg">
+                    <h4 class="font-semibold text-gray-700 mb-2"><i class="fas fa-info-circle mr-2 text-blue-500"></i>Key Observations:</h4>
+                    <ul class="list-disc pl-5 text-gray-700">
+                        <li class="mb-1">India maintains a significant quantitative advantage in conventional forces across all domains (land, air, sea).</li>
+                        <li class="mb-1">Pakistan's military is more compact but maintains strategic parity in nuclear capabilities.</li>
+                        <li class="mb-1">India's defense budget is approximately 8.5 times larger than Pakistan's, enabling greater force modernization.</li>
+                        <li>Both nations continue to modernize their forces, with India focusing on power projection capabilities and Pakistan emphasizing asymmetric deterrence.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Personnel Comparison -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Personnel Strength</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="data-card bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-semibold text-lg mb-3 text-gray-700">Active Military Personnel</h3>
+                    <div class="comparison-bar mb-3">
+                        <div class="bar-india h-full" style="width: 69%"></div>
+                        <div class="bar-pakistan h-full" style="width: 31%"></div>
+                    </div>
+                    <div class="flex justify-between text-sm">
+                        <span>India: ~1.47M</span>
+                        <span>Pakistan: ~660K</span>
+                    </div>
+                    <p class="mt-3 text-sm text-gray-600">India maintains over 2:1 advantage in active duty personnel, reflecting its larger population and territorial defense requirements.</p>
+                </div>
+                <div class="data-card bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-semibold text-lg mb-3 text-gray-700">Reserve Personnel</h3>
+                    <div class="comparison-bar mb-3">
+                        <div class="bar-india h-full" style="width: 68%"></div>
+                        <div class="bar-pakistan h-full" style="width: 32%"></div>
+                    </div>
+                    <div class="flex justify-between text-sm">
+                        <span>India: ~1.16M</span>
+                        <span>Pakistan: ~550K</span>
+                    </div>
+                    <p class="mt-3 text-sm text-gray-600">Both nations maintain substantial reserve forces, with India's reserves nearly matching Pakistan's total military personnel.</p>
+                </div>
+                <div class="data-card bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-semibold text-lg mb-3 text-gray-700">Paramilitary Forces</h3>
+                    <div class="comparison-bar mb-3">
+                        <div class="bar-india h-full" style="width: 83%"></div>
+                        <div class="bar-pakistan h-full" style="width: 17%"></div>
+                    </div>
+                    <div class="flex justify-between text-sm">
+                        <span>India: ~2.53M</span>
+                        <span>Pakistan: ~500K</span>
+                    </div>
+                    <p class="mt-3 text-sm text-gray-600">India's extensive paramilitary forces reflect internal security challenges and border protection needs across diverse terrain.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Air Power -->
+        <section class="mb-12">
+            <div class="airforce-gradient text-white p-6 rounded-xl shadow-lg mb-6">
+                <h2 class="text-2xl font-bold mb-2">Air Power Comparison</h2>
+                <p>Quantitative and qualitative analysis of aerial combat capabilities</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <canvas id="aircraftChart"></canvas>
+                    <div class="mt-4 text-sm text-gray-600">
+                        <p><i class="fas fa-jet-fighter-up mr-2 text-blue-500"></i> India maintains a 1.6:1 advantage in total aircraft and a similar ratio in fighter jets.</p>
+                        <p class="mt-2"><i class="fas fa-helicopter mr-2 text-blue-500"></i> Helicopter fleet comparison shows India with 2.4 times more helicopters, crucial for mobility and close air support.</p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-semibold text-lg mb-4">Combat Aircraft Breakdown</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-medium text-gray-700 mb-1">Fighter Aircraft</h4>
+                            <div class="comparison-bar mb-1">
+                                <div class="bar-india h-full" style="width: 61%"></div>
+                                <div class="bar-pakistan h-full" style="width: 39%"></div>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span>India: 513</span>
+                                <span>Pakistan: 328</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-gray-700 mb-1">Attack Aircraft</h4>
+                            <div class="comparison-bar mb-1">
+                                <div class="bar-india h-full" style="width: 59%"></div>
+                                <div class="bar-pakistan h-full" style="width: 41%"></div>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span>India: 130</span>
+                                <span>Pakistan: 90</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-gray-700 mb-1">Attack Helicopters</h4>
+                            <div class="comparison-bar mb-1">
+                                <div class="bar-india h-full" style="width: 58%"></div>
+                                <div class="bar-pakistan h-full" style="width: 42%"></div>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span>India: 80</span>
+                                <span>Pakistan: 57</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4 p-3 bg-blue-50 rounded-lg">
+                        <p class="text-sm text-blue-800"><i class="fas fa-lightbulb mr-2"></i> While India has numerical superiority, Pakistan compensates with strategic depth and dispersal of air assets to enhance survivability.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Land Power -->
+        <section class="mb-12">
+            <div class="army-gradient text-white p-6 rounded-xl shadow-lg mb-6">
+                <h2 class="text-2xl font-bold mb-2">Land Power Comparison</h2>
+                <p>Analysis of armored forces, artillery, and ground combat capabilities</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <canvas id="armorChart"></canvas>
+                    <div class="mt-4 text-sm text-gray-600">
+                        <p><i class="fas fa-tank mr-2 text-green-600"></i> India's armored superiority is most pronounced in main battle tanks (1.7:1) and armored vehicles (8.5:1).</p>
+                        <p class="mt-2"><i class="fas fa-explosion mr-2 text-green-600"></i> Pakistan maintains parity in towed artillery but leads in rocket projectors (2.3:1) emphasizing mobile firepower.</p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-semibold text-lg mb-4">Artillery Systems</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-medium text-gray-700 mb-1">Self-Propelled Artillery</h4>
+                            <div class="comparison-bar mb-1">
+                                <div class="bar-india h-full" style="width: 13%"></div>
+                                <div class="bar-pakistan h-full" style="width: 87%"></div>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span>India: 100</span>
+                                <span>Pakistan: 662</span>
+                            </div>
+                            <p class="text-xs text-gray-500 mt-1">Pakistan's emphasis on mobile artillery reflects lessons from desert warfare.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-gray-700 mb-1">Towed Artillery</h4>
+                            <div class="comparison-bar mb-1">
+                                <div class="bar-india h-full" style="width: 60%"></div>
+                                <div class="bar-pakistan h-full" style="width: 40%"></div>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span>India: 3,975</span>
+                                <span>Pakistan: 2,629</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-gray-700 mb-1">Rocket Projectors</h4>
+                            <div class="comparison-bar mb-1">
+                                <div class="bar-india h-full" style="width: 31%"></div>
+                                <div class="bar-pakistan h-full" style="width: 69%"></div>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span>India: 264</span>
+                                <span>Pakistan: 600</span>
+                            </div>
+                            <p class="text-xs text-gray-500 mt-1">Pakistan's rocket artillery advantage provides rapid response and area denial capabilities.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Naval Power -->
+        <section class="mb-12">
+            <div class="navy-gradient text-white p-6 rounded-xl shadow-lg mb-6">
+                <h2 class="text-2xl font-bold mb-2">Naval Power Comparison</h2>
+                <p>Analysis of blue-water capabilities and maritime force projection</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-md mb-6">
+                <canvas id="navalChart"></canvas>
+                <div class="mt-4 grid md:grid-cols-2 gap-4">
+                    <div class="p-3 bg-blue-50 rounded-lg">
+                        <p class="text-sm text-blue-800"><i class="fas fa-ship mr-2"></i> <strong>India's Naval Advantages:</strong> 2 aircraft carriers, 13 destroyers, and nuclear submarines provide power projection capabilities unmatched in the region.</p>
+                    </div>
+                    <div class="p-3 bg-green-50 rounded-lg">
+                        <p class="text-sm text-green-800"><i class="fas fa-anchor mr-2"></i> <strong>Pakistan's Strategy:</strong> Focuses on coastal defense with patrol vessels and submarines, emphasizing sea denial rather than power projection.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-semibold text-lg mb-4">Key Naval Assets</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex items-center mb-1">
+                                <i class="fas fa-jet-fighter-up mr-2 text-blue-500"></i>
+                                <span class="font-medium">Aircraft Carriers</span>
+                            </div>
+                            <div class="comparison-bar mb-1">
+                                <div class="bar-india h-full" style="width: 100%"></div>
+                                <div class="bar-pakistan h-full" style="width: 0%"></div>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span>India: 2</span>
+                                <span>Pakistan: 0</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex items-center mb-1">
+                                <i class="fas fa-ship mr-2 text-blue-500"></i>
+                                <span class="font-medium">Destroyers</span>
+                            </div>
+                            <div class="comparison-bar mb-1">
+                                <div class="bar-india h-full" style="width: 100%"></div>
+                                <div class="bar-pakistan h-full" style="width: 0%"></div>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span>India: 13</span>
+                                <span>Pakistan: 0</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex items-center mb-1">
+                                <i class="fas fa-submarine mr-2 text-blue-500"></i>
+                                <span class="font-medium">Submarines</span>
+                            </div>
+                            <div class="comparison-bar mb-1">
+                                <div class="bar-india h-full" style="width: 71%"></div>
+                                <div class="bar-pakistan h-full" style="width: 29%"></div>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span>India: 20 (3 nuclear)</span>
+                                <span>Pakistan: 8</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-semibold text-lg mb-4">Strategic Implications</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-full mr-3">
+                                <i class="fas fa-water text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Indian Ocean Dominance</h4>
+                                <p class="text-sm text-gray-600">India's carrier battle groups and nuclear submarines enable power projection across the Indian Ocean region.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-green-100 p-2 rounded-full mr-3">
+                                <i class="fas fa-shield-alt text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Pakistani Sea Denial</h4>
+                                <p class="text-sm text-gray-600">Pakistan focuses on submarine warfare and anti-access/area denial (A2/AD) strategies to counter India's naval superiority.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-purple-100 p-2 rounded-full mr-3">
+                                <i class="fas fa-exchange-alt text-purple-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Strategic Balance</h4>
+                                <p class="text-sm text-gray-600">While India has overwhelming conventional naval superiority, Pakistan's strategic weapons maintain deterrence.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nuclear Capabilities -->
+        <section class="mb-12">
+            <div class="nuclear-gradient text-white p-6 rounded-xl shadow-lg mb-6">
+                <h2 class="text-2xl font-bold mb-2">Strategic Nuclear Forces</h2>
+                <p>Analysis of second-strike capabilities and nuclear deterrence postures</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="font-semibold text-lg">Nuclear Warhead Estimates</h3>
+                        <div class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">
+                            <i class="fas fa-radiation mr-1"></i> Classified Data
+                        </div>
+                    </div>
+                    <div class="comparison-bar mb-3" style="height: 40px;">
+                        <div class="bar-india h-full" style="width: 51%"></div>
+                        <div class="bar-pakistan h-full" style="width: 49%"></div>
+                    </div>
+                    <div class="flex justify-between text-sm font-medium mb-4">
+                        <span>India: ~180</span>
+                        <span>Pakistan: ~170</span>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <div class="bg-orange-100 p-2 rounded-full mr-3">
+                                <i class="fas fa-bullseye text-orange-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Delivery Systems</h4>
+                                <p class="text-sm text-gray-600">Both nations maintain triad capabilities (land-based missiles, aircraft, and sea-based systems) though with varying levels of sophistication.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-purple-100 p-2 rounded-full mr-3">
+                                <i class="fas fa-chart-line text-purple-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Production Capacity</h4>
+                                <p class="text-sm text-gray-600">Pakistan is estimated to have faster warhead production capacity, while India focuses on technological refinement.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-semibold text-lg mb-4">Doctrinal Differences</h3>
+                    <div class="space-y-4">
+                        <div class="p-4 bg-gray-50 rounded-lg">
+                            <h4 class="font-medium text-gray-800 mb-2">India's Nuclear Doctrine</h4>
+                            <ul class="list-disc pl-5 text-sm text-gray-700">
+                                <li class="mb-1">No first use policy</li>
+                                <li class="mb-1">Massive retaliation to nuclear strike</li>
+                                <li>Civilian control over nuclear weapons</li>
+                            </ul>
+                        </div>
+                        <div class="p-4 bg-gray-50 rounded-lg">
+                            <h4 class="font-medium text-gray-800 mb-2">Pakistan's Nuclear Doctrine</h4>
+                            <ul class="list-disc pl-5 text-sm text-gray-700">
+                                <li class="mb-1">First use option maintained</li>
+                                <li class="mb-1">Tactical nuclear weapons for battlefield use</li>
+                                <li>Military maintains significant control</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mt-4 p-3 bg-yellow-50 rounded-lg">
+                        <p class="text-sm text-yellow-800"><i class="fas fa-exclamation-triangle mr-2"></i> Despite conventional force imbalances, nuclear parity creates strategic stability through mutual assured destruction.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusion -->
+        <section class="bg-white p-6 rounded-xl shadow-md">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Strategic Assessment</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                    <h3 class="font-semibold text-lg mb-2 text-gray-700">Key Takeaways</h3>
+                    <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                        <li>India maintains overwhelming conventional superiority across all military domains (land, air, sea).</li>
+                        <li>Pakistan compensates with strategic depth, tactical nuclear weapons, and asymmetric warfare capabilities.</li>
+                        <li>The naval balance is most lopsided, with India developing true blue-water capabilities while Pakistan focuses on coastal defense.</li>
+                        <li>Nuclear parity creates a strategic balance despite conventional force disparities.</li>
+                        <li>India's defense spending allows for more comprehensive modernization, while Pakistan prioritizes strategic weapons.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mb-2 text-gray-700">Future Projections</h3>
+                    <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                        <li>India will likely continue expanding its power projection capabilities, especially naval and air forces.</li>
+                        <li>Pakistan may focus on expanding its tactical nuclear weapons and precision strike capabilities.</li>
+                        <li>Both nations will continue modernizing nuclear delivery systems and missile defense capabilities.</li>
+                        <li>The conventional balance may become less relevant as both nations enhance strategic deterrence capabilities.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-6 p-4 bg-gray-50 rounded-lg">
+                <p class="text-gray-700"><i class="fas fa-balance-scale mr-2 text-gray-600"></i> <strong>Final Assessment:</strong> While India's conventional military superiority is clear and growing, Pakistan's strategic nuclear capabilities and asymmetric warfare doctrines maintain a balance of deterrence in the region. The military balance reflects each nation's strategic priorities - India as a regional power with global aspirations, and Pakistan as a security-focused state emphasizing deterrence against a larger neighbor.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <p class="mb-2">Military Power Comparison Data (2025 Projections)</p>
+                <p class="text-sm text-gray-400">Sources: Global Firepower Index, IISS Military Balance, SIPRI Yearbook</p>
+                <p class="text-sm text-gray-400 mt-4">Note: All figures are estimates based on publicly available data</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Aircraft Chart
+        const aircraftCtx = document.getElementById('aircraftChart').getContext('2d');
+        const aircraftChart = new Chart(aircraftCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Total Aircraft', 'Fighter Aircraft', 'Attack Aircraft', 'Helicopters', 'Attack Helicopters'],
+                datasets: [
+                    {
+                        label: 'India',
+                        data: [2229, 513, 130, 899, 80],
+                        backgroundColor: '#FF9933',
+                        borderColor: '#FF9933',
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'Pakistan',
+                        data: [1399, 328, 90, 373, 57],
+                        backgroundColor: '#01411C',
+                        borderColor: '#01411C',
+                        borderWidth: 1
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Aircraft Fleet Comparison',
+                        font: {
+                            size: 16
+                        }
+                    },
+                    legend: {
+                        position: 'top',
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Number of Aircraft'
+                        }
+                    }
+                }
+            }
+        });
+
+        // Armor Chart
+        const armorCtx = document.getElementById('armorChart').getContext('2d');
+        const armorChart = new Chart(armorCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Main Battle Tanks', 'Armored Vehicles', 'Artillery Pieces'],
+                datasets: [
+                    {
+                        label: 'India',
+                        data: [3676, 148594, 9743],
+                        backgroundColor: '#FF9933',
+                        borderColor: '#FF9933',
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'Pakistan',
+                        data: [2233, 17516, 4619],
+                        backgroundColor: '#01411C',
+                        borderColor: '#01411C',
+                        borderWidth: 1
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Armored Forces Comparison',
+                        font: {
+                            size: 16
+                        }
+                    },
+                    legend: {
+                        position: 'top',
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Number of Units'
+                        }
+                    }
+                }
+            }
+        });
+
+        // Naval Chart
+        const navalCtx = document.getElementById('navalChart').getContext('2d');
+        const navalChart = new Chart(navalCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['India', 'Pakistan'],
+                datasets: [{
+                    data: [293, 121],
+                    backgroundColor: ['#FF9933', '#01411C'],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Total Naval Fleet Size',
+                        font: {
+                            size: 16
+                        }
+                    },
+                    legend: {
+                        position: 'top',
+                    }
+                }
+            }
+        });
+    </script>
+<p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=DS2521/india-vs-pakistan-military-comparision" style="color: #fff;text-decoration: underline;" target="_blank" >Remix</a></p></body>
+</html>
